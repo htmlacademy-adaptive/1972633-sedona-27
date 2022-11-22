@@ -1,7 +1,7 @@
 # Личный проект «Седона» 
 
 * Студент: [Елена Ефимова](https://up.htmlacademy.ru/adaptive/27/user/1972633).
-* Наставник: `Олег Цыганов`.
+* Наставник: [Олег Цыганов](https://htmlacademy.ru/profile/olegtsyganov).
 
 ---
 
