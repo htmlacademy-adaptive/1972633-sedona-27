@@ -1,0 +1,51 @@
+.doubt {
+  padding: 38px 18px 34px;
+}
+
+.doubt__title {
+  font-size: 21px;
+  line-height: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $black;
+  margin: 0 0 27px;
+  text-align: center;
+}
+
+.doubt__text {
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 0 38px;
+}
+
+.doubt__video-container {
+  position: relative;
+
+  &:hover .doubt__button {
+    opacity: 0.8;
+  }
+
+  &:active .doubt__button {
+    opacity: 0.5;
+  }
+}
+
+.doubt__video-image {
+  display: block;
+  width: 100%;
+}
+
+.doubt__button {
+  position: absolute;
+  display: block;
+  background-color: transparent;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  padding: 0;
+  border: 0;
+}

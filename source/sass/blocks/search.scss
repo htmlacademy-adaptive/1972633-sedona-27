@@ -1,0 +1,25 @@
+.search {
+  padding: 38px 18px 32px;
+}
+
+.search__button {
+  width: 100%;
+}
+
+.search__title {
+  font-size: 21px;
+  line-height: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $black;
+  margin: 0 0 19px;
+  text-align: center;
+}
+
+.search__text {
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 0 32px;
+}

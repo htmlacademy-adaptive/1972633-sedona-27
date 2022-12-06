@@ -1,0 +1,17 @@
+.main-footer {
+  padding: 38px 18px 23px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-footer__hashtag {
+  display: block;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  color: $black;
+  margin-bottom: 34px;
+}

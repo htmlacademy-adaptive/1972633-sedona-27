@@ -1,0 +1,166 @@
+.advantages__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.advantages__item--decor {
+  position: relative;
+}
+
+.advantages__item--decor::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: 100%;
+  background-image: url("../../img/main/decor.svg");
+  background-position: 0 -16px;
+  background-repeat: no-repeat;
+}
+
+.advantages__item {
+  background-color: $blue;
+
+  &--grey {
+    background-color: $basegrey;
+    position: relative;
+  }
+}
+
+.advantages__container--size-s::before {
+  content: "";
+  position: absolute;
+  width: auto;
+  height: 1px;
+  top: 0;
+  left: 18px;
+  right: 18px;
+  background-color: $basedarkgrey;
+}
+
+.advantages__item--grey:nth-child(3) .advantages__container--size-s::before {
+  display: none;
+}
+
+
+.advantages__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 54px 18px 40px;
+
+  &--size-m {
+    padding: 37px 18px;
+  }
+
+  &--size-s {
+    padding: 24px 18px;
+  }
+}
+
+.advantages__item:last-child .advantages__container--size-s {
+  padding: 24px 18px 28px;
+}
+
+.advantages__title {
+  color: $black;
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 0 11px;
+
+  &--white {
+    color: $white;
+  }
+}
+
+.advantages__number {
+  color: $baseblack;
+  line-height: 10px;
+  text-align: center;
+  margin: 0 0 18px;
+
+  &--white {
+    color: $white;
+    text-transform: uppercase;
+  }
+}
+
+.advantages__text {
+  color: $baseblack;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+
+  &--white {
+    color: $white;
+  }
+}
+
+.advantages__img {
+  width: 100%;
+  height: 260px;
+  display: block;
+}
+
+.advantages__sublist {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.advantages__subitem {
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  padding: 0 18px 25px;
+
+  &--house {
+    background-image: url("../../img/main/house.svg");
+    background-repeat: no-repeat;
+    background-position: 18px 23px;
+  }
+
+  &--food {
+    background-image: url("../../img/main/food.svg");
+    background-repeat: no-repeat;
+    background-position: 18px 0;
+  }
+
+  &--souvenirs {
+    background-image: url("../../img/main/souvenirs.svg");
+    background-repeat: no-repeat;
+    background-position: 18px 0;
+  }
+}
+
+.advantages__subitem:first-child {
+  padding-top: 23px;
+}
+
+.advantages__subitem:last-child {
+  padding-bottom: 46px;
+}
+
+.advantages__subtitle {
+  color: $black;
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  padding-left: 47px;
+  padding-top: 8px;
+  margin: 0 0 16px;
+}
+
+.advantages__subtext {
+  color: $baseblack;
+  text-transform: uppercase;
+  margin: 0;
+  padding-left: 47px;
+}
