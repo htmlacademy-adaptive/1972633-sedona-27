@@ -4,6 +4,8 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page__body">
@@ -36,16 +38,18 @@
       Добро пожаловать в Седону
     </h1>
     <section class="hero">
-      <img class="hero__image" src="img/main/welcome.svg" width="282" height="214" alt="Добро пожаловать в Седону.">
+      <div class="hero__wrapper">
+        <img class="hero__image" src="img/main/welcome.svg" width="282" height="214" alt="Добро пожаловать в Седону.">
+      </div>
       <h2 class="hero__title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
       <p class="hero__text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
     </section>
     <section class="advantages">
       <h2 class="visually-hidden">Преимущества</h2>
       <ul class="advantages__list">
-        <li class="advantages__item">
+        <li class="advantages__item advantages__item--decor">
           <div class="advantages__row">
-            <div class="advantages__container advantages__container--accent">
+            <div class="advantages__container">
               <h3 class="advantages__title advantages__title--white">Настоящий городок</h3>
               <span class="advantages__number advantages__number--white">— №1 —</span>
               <p class="advantages__text advantages__text--white">Седона не аттракцион для туристов, там течёт своя
@@ -56,47 +60,53 @@
           </div>
           <ul class="advantages__sublist">
             <li class="advantages__subitem advantages__subitem--house">
-              <h3 class="advantages__title">Жилье</h3>
-              <p class="advantages__text">Рекомендуем пожить в настоящем мотеле, все как в кино!
+              <h3 class="advantages__subtitle">Жилье</h3>
+              <p class="advantages__subtext">Рекомендуем пожить в настоящем мотеле, все как в кино!
               </p>
             </li>
             <li class="advantages__subitem advantages__subitem--food">
-              <h3 class="advantages__title">Еда</h3>
-              <p class="advantages__text">Всегда заказывайте фирменный бургер, вы не
+              <h3 class="advantages__subtitle">Еда</h3>
+              <p class="advantages__subtext">Всегда заказывайте фирменный бургер, вы не
                 разочаруетесь!</p>
             </li>
             <li class="advantages__subitem advantages__subitem--souvenirs">
-              <h3 class="advantages__title">Сувениры</h3>
-              <p class="advantages__text">Не только китайского, но и местного производства!</p>
+              <h3 class="advantages__subtitle">Сувениры</h3>
+              <p class="advantages__subtext">Не только китайского, но и местного производства!</p>
             </li>
           </ul>
         </li>
         <li class="advantages__item">
           <div class="advantages__row">
-            <div class="advantages__container advantages__container--accent">
+            <div class="advantages__container advantages__container--size-m">
               <h3 class="advantages__title advantages__title--white">Там есть мост дьявола</h3>
               <span class="advantages__number advantages__number--white">— №2 —</span>
               <p class="advantages__text advantages__text--white">Да, по нему можно пройти! Если вы осмелитесь, конечно
               </p>
             </div>
-            <img class="advantages__image" src="img/main/photo-mountains.jpg" width="320" height="260"
+            <img class="advantages__img" src="img/main/photo-mountains.jpg" width="320" height="260"
               alt="Мост дьявола.">
           </div>
         </li>
         <li class="advantages__item advantages__item--grey">
-          <h3 class="advantages__title">Небольшая площадь</h3>
-          <span class="advantages__number">— №3 —</span>
-          <p class="advantages__text">Все интересные места находятся очень близко</p>
+          <div class="advantages__container advantages__container--size-s">
+            <h3 class="advantages__title">Небольшая площадь</h3>
+            <span class="advantages__number">— №3 —</span>
+            <p class="advantages__text">Все интересные места находятся очень близко</p>
+          </div>
         </li>
         <li class="advantages__item advantages__item--grey">
-          <h3 class="advantages__title">Красивая дорога</h3>
-          <span class="advantages__number">— №4 —</span>
-          <p class="advantages__text">Ехать в Седоны из Лас-Вегаса совсем не скучно!</p>
+          <div class="advantages__container advantages__container--size-s">
+            <h3 class="advantages__title">Красивая дорога</h3>
+            <span class="advantages__number">— №4 —</span>
+            <p class="advantages__text">Ехать в Седоны из Лас-Вегаса совсем не скучно!</p>
+          </div>
         </li>
         <li class="advantages__item advantages__item--grey">
-          <h3 class="advantages__title">Мало туристов</h3>
-          <span class="advantages__number">— №5 —</span>
-          <p class="advantages__text">Большинство едет в Гранд каньон и толпится там</p>
+          <div class="advantages__container advantages__container--size-s">
+            <h3 class="advantages__title">Мало туристов</h3>
+            <span class="advantages__number">— №5 —</span>
+            <p class="advantages__text">Большинство едет в Гранд каньон и толпится там</p>
+          </div>
         </li>
       </ul>
     </section>
@@ -167,4 +177,5 @@
     </div>
   </footer>
 </body>
+
 </html>

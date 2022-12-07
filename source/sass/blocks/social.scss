@@ -1,0 +1,33 @@
+.social {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 48px);
+  column-gap: 6px;
+}
+
+.social__link {
+  position: relative;
+  background-color: $blue;
+  display: block;
+  min-height: 48px;
+  min-width: 48px;
+
+  &:hover {
+    background-color: $darkblue;
+  }
+
+  &:active {
+    background-color: $accentblue;
+  }
+}
+
+.social__link-icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}

@@ -1,0 +1,26 @@
+.button {
+  width: auto;
+  padding: 16px 10px;
+  text-transform: uppercase;
+  color: $white;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  background-color: $blue;
+  display: block;
+  text-align: center;
+  border: none;
+
+  &:hover {
+    background-color: $darkblue;
+  }
+
+  &:active {
+    background-color: $accentblue;
+  }
+
+  &--size-m {
+    padding: 18px 10px 14px 10px;
+    width: 100%;
+  }
+}
