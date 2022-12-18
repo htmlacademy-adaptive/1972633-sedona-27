@@ -13,7 +13,9 @@
     <a class="main-header__logo" href="#">
       <img class="main-header__logo-image" src="img/logo.svg" width="185" height="96" alt="Логотип Sedona.">
     </a>
-    <nav class="main-header__nav main-nav">
+    <!-- У класа main-nav убрать класс main-nav--closed и добавить класс main-nav--open для открытого меню -->
+    <!-- К класу main-nav добавить класс main-nav--nojs если не сработает script -->
+    <nav class="main-header__nav main-nav main-nav--closed">
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
@@ -41,7 +43,7 @@
       <div class="hero__wrapper">
         <img class="hero__image" src="img/main/welcome.svg" width="282" height="214" alt="Добро пожаловать в Седону.">
       </div>
-      <h2 class="hero__title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
+      <h2 class="hero__title">Седона — небольшой<br class="hero__br-index"> городок в Аризоне, заслуживающий большего!</h2>
       <p class="hero__text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
     </section>
     <section class="advantages">
@@ -52,26 +54,26 @@
             <div class="advantages__container">
               <h3 class="advantages__title advantages__title--white">Настоящий городок</h3>
               <span class="advantages__number advantages__number--white">— №1 —</span>
-              <p class="advantages__text advantages__text--white">Седона не аттракцион для туристов, там течёт своя
+              <p class="advantages__text advantages__text--white">Седона не аттракцион для  туристов, там течёт своя
                 жизнь</p>
             </div>
             <img class="advantages__img" src="img/main/photo-city.jpg" width="320" height="260"
               alt="Настоящий городок.">
           </div>
           <ul class="advantages__sublist">
-            <li class="advantages__subitem advantages__subitem--house">
+            <li class="advantages__subitem advantages__subitem--space-top advantages__subitem--house">
               <h3 class="advantages__subtitle">Жилье</h3>
               <p class="advantages__subtext">Рекомендуем пожить в настоящем мотеле, все как в кино!
               </p>
             </li>
             <li class="advantages__subitem advantages__subitem--food">
               <h3 class="advantages__subtitle">Еда</h3>
-              <p class="advantages__subtext">Всегда заказывайте фирменный бургер, вы не
+              <p class="advantages__subtext">Всегда заказывайте фирменный бургер,<br class="advantages__subbr"> вы не
                 разочаруетесь!</p>
             </li>
-            <li class="advantages__subitem advantages__subitem--souvenirs">
+            <li class="advantages__subitem advantages__subitem--space-bottom advantages__subitem--souvenirs">
               <h3 class="advantages__subtitle">Сувениры</h3>
-              <p class="advantages__subtext">Не только китайского, но и местного производства!</p>
+              <p class="advantages__subtext">Не только китайского,<br class="advantages__subbr"> но и местного производства!</p>
             </li>
           </ul>
         </li>
@@ -80,10 +82,10 @@
             <div class="advantages__container advantages__container--size-m">
               <h3 class="advantages__title advantages__title--white">Там есть мост дьявола</h3>
               <span class="advantages__number advantages__number--white">— №2 —</span>
-              <p class="advantages__text advantages__text--white">Да, по нему можно пройти! Если вы осмелитесь, конечно
+              <p class="advantages__text advantages__text--white advantages__text--width-s">Да, по нему можно пройти! Если вы осмелитесь, конечно
               </p>
             </div>
-            <img class="advantages__img" src="img/main/photo-mountains.jpg" width="320" height="260"
+            <img class="advantages__img advantages__img--reverse" src="img/main/photo-mountains.jpg" width="320" height="260"
               alt="Мост дьявола.">
           </div>
         </li>
@@ -94,15 +96,15 @@
             <p class="advantages__text">Все интересные места находятся очень близко</p>
           </div>
         </li>
-        <li class="advantages__item advantages__item--grey">
-          <div class="advantages__container advantages__container--size-s">
+        <li class="advantages__item advantages__item--grey advantages__item--decor-line">
+          <div class="advantages__container advantages__container--size-s advantages__container--space-bottom-m">
             <h3 class="advantages__title">Красивая дорога</h3>
             <span class="advantages__number">— №4 —</span>
-            <p class="advantages__text">Ехать в Седоны из Лас-Вегаса совсем не скучно!</p>
+            <p class="advantages__text">Ехать в Седону из Лас-<br class="advantages__br">Вегаса<br class="advantages__br--mobile"> совсем<br class="advantages__br--tablet"> не скучно!</p>
           </div>
         </li>
-        <li class="advantages__item advantages__item--grey">
-          <div class="advantages__container advantages__container--size-s">
+        <li class="advantages__item advantages__item--grey advantages__item--decor-line">
+          <div class="advantages__container advantages__container--size-s advantages__container--space-bottom">
             <h3 class="advantages__title">Мало туристов</h3>
             <span class="advantages__number">— №5 —</span>
             <p class="advantages__text">Большинство едет в Гранд каньон и толпится там</p>
@@ -112,7 +114,8 @@
     </section>
     <section class="search">
       <h2 class="search__title">Заинтересовались?</h2>
-      <p class="search__text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в
+      <p class="search__text">Укажите предполагаемые даты поездки, <br class="br"> и мы покажем вам лучшие предложения
+        гостиниц в
         Седоне
       </p>
       <a class="search__button button" href="#">
@@ -176,6 +179,7 @@
       </a>
     </div>
   </footer>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

@@ -13,7 +13,7 @@
     <a class="main-header__logo" href="index.html">
       <img class="main-header__logo-image" src="img/logo.svg" width="185" height="96" alt="Логотип Sedona.">
     </a>
-    <nav class="main-header__nav main-nav">
+    <nav class="main-header__nav main-nav main-nav--closed">
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
@@ -41,7 +41,7 @@
       <div class="hero__wrapper hero__wrapper--size-s">
         <img class="hero__image" src="img/form/sedona.svg" width="229" height="39" alt="Добро пожаловать в Седону.">
       </div>
-      <h2 class="hero__title hero__title--size-s hero__title--size-m">Фото и видео</h2>
+      <h2 class="hero__title hero__title hero__title--space-bottom hero__title--font-size">Фото и видео</h2>
       <p class="hero__text hero__text--size-m">Не можете решиться на путешествие из-за курса? Фотографии помогут вам
         забыть о
         политике и экономике.</p>
@@ -49,20 +49,22 @@
     <section class="photo">
       <h2 class="visually-hidden">Фото и видео</h2>
       <ul class="photo__list">
-        <li class="photo__item">
+        <li class="photo__item photo__item--decor-top photo__item--row">
           <a class="photo__link-image" href="#">
             <img class="photo__image" src="img/catalog/photo-1-mobile.jpg" width="280" height="280"
               alt="Неродные просторы.">
           </a>
-          <div class="photo__wrapper-description">
-            <h3 class="photo__title">Неродные просторы</h3>
-            <p class="photo__author">Автор фото: Борис</p>
+          <div class="photo__wrapper">
+            <div class="photo__wrapper-description">
+              <h3 class="photo__title photo__title--space-bottom">Неродные просторы</h3>
+              <p class="photo__author">Автор фото: Борис</p>
+            </div>
             <div class="photo__like">
               <svg class="photo__like-icon" aria-hidden="true" focusable="false" width="23" height="21"
                 viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path opacity="0.3"
+                <path
                   d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z"
-                  fill="black" />
+                  fill="currentcolor" />
               </svg>
               <span class="photo__like-number">1350</span>
             </div>
@@ -73,15 +75,17 @@
             <img class="photo__image" src="img/catalog/photo-2-mobile.jpg" width="280" height="280"
               alt="Местная растительность.">
           </a>
-          <div class="photo__wrapper-description">
-            <h3 class="photo__title">Местная растительность</h3>
-            <p class="photo__author">Автор фото: Сергей</p>
+          <div class="photo__wrapper">
+            <div class="photo__wrapper-description">
+              <h3 class="photo__title">Местная растительность</h3>
+              <p class="photo__author">Автор фото: Сергей</p>
+            </div>
             <div class="photo__like">
               <svg class="photo__like-icon" aria-hidden="true" focusable="false" width="23" height="21"
                 viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path opacity="0.3"
+                <path
                   d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z"
-                  fill="black" />
+                  fill="currentcolor" />
               </svg>
               <span class="photo__like-number">143</span>
             </div>
@@ -92,15 +96,17 @@
             <img class="photo__image" src="img/catalog/photo-3-mobile.jpg" width="280" height="280"
               alt="Дорога на север.">
           </a>
-          <div class="photo__wrapper-description">
-            <h3 class="photo__title">Дорога на север</h3>
-            <p class="photo__author">Автор фото: Петр</p>
+          <div class="photo__wrapper photo__wrapper--accent">
+            <div class="photo__wrapper-description">
+              <h3 class="photo__title">Дорога на север</h3>
+              <p class="photo__author">Автор фото: Петр</p>
+            </div>
             <div class="photo__like">
               <svg class="photo__like-icon" aria-hidden="true" focusable="false" width="23" height="21"
                 viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path opacity="0.3"
+                <path
                   d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z"
-                  fill="black" />
+                  fill="currentcolor" />
               </svg>
               <span class="photo__like-number">96</span>
             </div>
@@ -110,15 +116,17 @@
           <a class="photo__link-image" href="#">
             <img class="photo__image" src="img/catalog/photo-4-mobile.jpg" width="280" height="280" alt="Мост дьявола.">
           </a>
-          <div class="photo__wrapper-description">
-            <h3 class="photo__title">Мост дьявола</h3>
-            <p class="photo__author">Автор фото: Антон</p>
+          <div class="photo__wrapper">
+            <div class="photo__wrapper-description">
+              <h3 class="photo__title">Мост дьявола</h3>
+              <p class="photo__author">Автор фото: Антон</p>
+            </div>
             <div class="photo__like">
               <svg class="photo__like-icon" aria-hidden="true" focusable="false" width="23" height="21"
                 viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path opacity="0.3"
+                <path
                   d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z"
-                  fill="black" />
+                  fill="currentcolor" />
               </svg>
               <span class="photo__like-number">234</span>
             </div>
@@ -143,9 +151,9 @@
       </div>
     </section>
   </main>
-  <footer class="main-footer">
+  <footer class="main-footer main-footer--size-s">
     <a class="main-footer__hashtag" href="#">#visitSedona</a>
-    <ul class="main-footer__social social">
+    <ul class="main-footer__social main-footer__social--size-s social">
       <li class="social__item">
         <a class="social__link" href="#">
           <svg class="social__link-icon" aria-hidden="true" focusable="false" width="24" height="14" viewBox="0 0 24 14"
@@ -192,6 +200,7 @@
       </a>
     </div>
   </footer>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

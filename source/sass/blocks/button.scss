@@ -1,5 +1,5 @@
 .button {
-  width: auto;
+  font-family: $main-font;
   padding: 16px 10px;
   text-transform: uppercase;
   color: $white;
@@ -17,10 +17,5 @@
 
   &:active {
     background-color: $accentblue;
-  }
-
-  &--size-m {
-    padding: 18px 10px 14px 10px;
-    width: 100%;
   }
 }
