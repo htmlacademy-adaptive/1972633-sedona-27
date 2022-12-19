@@ -1,26 +1,77 @@
 .reviews__form {
   display: flex;
   flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 75px 60px 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 39px 120px 0;
+    grid-template-columns: 493px 1fr;
+  }
 }
 
 .reviews__fieldset {
   position: relative;
   margin: 0;
   border: none;
-  padding: 0 0 39px;
+  padding: 0 0 23px;
   display: flex;
   flex-direction: column;
 
-  &--size-l {
-    padding-bottom: 56px;
+  @media (min-width: $tablet-width) {
+    padding: 0 0 47px;
   }
 
-  &--size-m {
-    padding-bottom: 34px;
+  @media (min-width: $desktop-width) {
+    padding: 0 0 51px;
   }
 
-  &--size-s {
-    padding-bottom: 24px;
+  &--space-bottom-l {
+    padding: 0 0 61px;
+
+    @media (min-width: $tablet-width) {
+      grid-column: 1/-1;
+      padding: 0 0 48px;
+    }
+  }
+
+  &--space-bottom-m {
+    padding: 0 0 13px;
+
+    @media (min-width: $tablet-width) {
+      padding: 0 0 32px;
+    }
+  }
+
+  &--space-bottom-s {
+    padding: 0 0 6px;
+
+    @media (min-width: $tablet-width) {
+      padding: 0 0 42px;
+    }
+  }
+
+  &--max-width {
+    @media (min-width: $tablet-width) {
+      grid-column: 1/-1;
+    }
+  }
+}
+
+.reviews__fieldset--decor::before {
+  @media (min-width: $tablet-width) {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -53px;
+    bottom: 23px;
+    width: 1px;
+    height: auto;
+    background-color: $linegrey;
   }
 }
 
@@ -30,27 +81,139 @@
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 20px;
+  margin: 0 0 20px;
   color: $black;
-  padding: 24px 20px 0;
+  padding: 25px 19px 0;
   width: 100%;
   border-top: 1px solid $grey;
+
+  @media (min-width: $tablet-width) {
+    border-top: none;
+    margin: 0 0 28px;
+    font-size: 21px;
+    line-height: 26px;
+    padding: 0 19px 0;
+  }
+
+  &--space-top {
+    padding: 21px 19px 0;
+
+    @media (min-width: $tablet-width) {
+      padding: 0 19px 0;
+    }
+  }
+}
+
+.reviews__legend--decor {
+  position: relative;
+  z-index: 3;
+}
+
+.reviews__legend--decor::before {
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    content: "";
+    top: 49%;
+    right: 81%;
+    height: 1px;
+    background-color: $linegrey;
+    z-index: 2;
+    left: 0;
+  }
+}
+
+.reviews__legend--decor::after {
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    content: "";
+    top: 49%;
+    left: 81%;
+    height: 1px;
+    background-color: $linegrey;
+    z-index: 2;
+    right: 0;
+  }
 }
 
 .reviews__list {
   margin: 0;
   list-style-type: none;
   padding: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+
+  &--row {
+    @media (min-width: $tablet-width) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &--radio {
+    @media (min-width: $tablet-width) {
+      padding: 0 69px 0 35px;
+      column-gap: 50px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 17px 53px 25px;
+    }
+  }
+
+  &--checkbox {
+    @media (min-width: $tablet-width) {
+      padding: 0 84px;
+      column-gap: 31px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 31px 44px 28px;
+      column-gap: 0;
+    }
+  }
+
+  &--space-right {
+    @media (min-width: $tablet-width) {
+      padding: 0 44px 0 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 0 63px 0 0;
+    }
+  }
+
+  &--space-left {
+    @media (min-width: $tablet-width) {
+      padding: 0 0 0 44px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 0 0 0 64px;
+    }
+  }
 }
 
 .reviews__item {
   display: flex;
   flex-direction: column;
-  margin-bottom: 16px;
+  margin: 0 0 16px;
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 17px;
+  }
 }
 
-.reviews__item:last-child {
-  margin-bottom: 0;
+.reviews__item--checkbox:not(:nth-child(-n+2)) {
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
 }
 
 .reviews__label {
@@ -89,14 +252,23 @@
   align-self: flex-start;
 }
 
+.reviews__input-radio:hover + .reviews__control-mark {
+  background-color: $grey;
+}
+
+.reviews__input-radio:active + .reviews__control-mark {
+  background-color: $darkgrey;
+}
+
+
 .reviews__label-radio .reviews__control-mark {
   border-radius: 50%;
 }
 
 .reviews__control-mark {
   position: absolute;
-  width: 40px;
-  height: 40px;
+  width: 46px;
+  height: 46px;
   background-color: $lightgrey;
   left: 0;
   margin-right: 16px;
@@ -131,22 +303,54 @@
   background-position: center;
 }
 
+.reviews__input-checkbox:hover + .reviews__control-mark {
+  background-color: $grey;
+}
+
+.reviews__input-checkbox:active + .reviews__control-mark {
+  background-color: $darkgrey;
+}
+
 .reviews__textarea {
   font-family: $main-font;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
   color: rgba($black, 0.3);
-  padding: 16px;
+  padding: 16px 16px 27px;
   border: 0;
   background-color: $lightgrey;
   margin: 0 20px;
   width: auto;
   resize: none;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    padding: 17px 16px 14px;
+    min-height: 160px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin: 0 auto;
+    padding: 16px 16px 14px;
+    max-width: 768px;
+    width: 100%;
+  }
 }
 
 .reviews__button {
   margin: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 41px;
+    min-width: 324px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 384px;
+    width: 100%;
+    margin: 0 0 64px 96px;
+  }
 }
 
 .reviews__smalllegend {
@@ -155,5 +359,23 @@
   text-transform: uppercase;
   color: rgba($baseblack, 0.6);
   align-self: flex-end;
-  margin-right: 20px;
+  margin: 3px 20px 17px 0;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 41px auto;
+    padding-bottom: 14px;
+    font-size: 14px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 95px 65px auto;
+  }
+}
+
+.reviews__br {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
 }

@@ -1,26 +1,48 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero__br-form {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}
+
+.hero__br-index {
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
 .hero__wrapper {
   display: flex;
   justify-content: center;
   padding: 90px 0 85px;
+  width: 100%;
   background-image: url("../../img/main/main-mobile-bottom.svg"),
     url("../../img/main/main-mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center bottom;
-  margin-bottom: 32px;
+  margin: 0 0 33px;
   background-color: $blue;
 
   &--size-s {
     background-image: url("../../img/form/intro-triangle.svg"),
       url("../../img/form/back-desktop.jpg");
     padding: 52px 0 67px 0;
-    margin-bottom: 37px;
+    margin: 0 0 37px;
   }
 }
 
 .hero__title {
-  margin: 0;
-  margin-bottom: 35px;
+  margin: 0 0 36px -3px;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
@@ -29,29 +51,77 @@
   color: $black;
   padding: 0 18px;
 
-  &--size-s {
-    margin-bottom: 24px;
+  @media (min-width: $tablet-width) {
+    font-size: 21px;
+    margin: 0 0 28px -3px;
+    max-width: 520px;
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 484px;
+    margin: 0 0 30px -3px;
+  }
+
+  &--space-bottom {
+    margin: 0 0 27px;
+
+    @media (min-width: $tablet-width) {
+      margin: 0 0 30px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin: 0 0 32px;
+    }
+  }
+
+  &--font-size {
+    @media (min-width: $tablet-width) {
+      font-size: 30px;
+    }
   }
 
   &--size-m {
-    font-size: 21px;
+    margin: 0 0 24px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 30px;
+      margin: 0 0 22px;
+      max-width: 435px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin: 0 0 30px;
+    }
   }
 }
 
 .hero__text {
-  margin: 0;
   text-align: center;
   text-transform: uppercase;
-  margin-bottom: 32px;
+  margin: 0 0 28px;
   padding: 0 18px;
 
-  &--size-s {
-    margin-bottom: 28px;
+  @media (min-width: $tablet-width) {
+    max-width: 484px;
+    padding: 0;
+    margin: 0 0 27px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 28px;
   }
 
   &--size-m {
-    font-size: 18px;
-    line-height: 26px;
-    margin-bottom: 36px;
+    @media (min-width: $tablet-width) {
+      max-width: 446px;
+      margin: 0 0 28px;
+    }
+  }
+
+  &--line-spacing {
+    @media (min-width: $tablet-width) {
+      line-height: 24px;
+    }
   }
 }

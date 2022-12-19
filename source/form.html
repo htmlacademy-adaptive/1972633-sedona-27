@@ -13,7 +13,7 @@
     <a class="main-header__logo" href="index.html">
       <img class="main-header__logo-image" src="img/logo.svg" width="185" height="96" alt="Логотип Sedona.">
     </a>
-    <nav class="main-header__nav main-nav">
+    <nav class="main-header__nav main-nav main-nav--closed">
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
@@ -41,17 +41,17 @@
       <div class="hero__wrapper hero__wrapper--size-s">
         <img class="hero__image" src="img/form/sedona.svg" width="229" height="39" alt="Добро пожаловать в Седону.">
       </div>
-      <h2 class="hero__title hero__title--size-s">Оставьте свой отзыв</h2>
-      <p class="hero__text hero__text--size-s">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о
+      <h2 class="hero__title hero__title--size-m">Оставьте свой отзыв</h2>
+      <p class="hero__text hero__text--line-spacing">Помогите нашим отелям стать лучше! оставьте отзыв о них,<br class="hero__br-form"> а также о
         посещенных вами
         достопримечательностях</p>
     </section>
     <section class="reviews">
       <h2 class="visually-hidden">Заполните форму</h2>
       <form class="reviews__form" action="https://echo.htmlacademy.ru/" method="post">
-        <fieldset class="reviews__fieldset">
+        <fieldset class="reviews__fieldset reviews__fieldset--decor">
           <legend class="reviews__legend">Представьтесь:</legend>
-          <ul class="reviews__list">
+          <ul class="reviews__list reviews__list--space-right">
             <li class="reviews__item">
               <label class="reviews__label" for="name-field">Имя*:</label>
               <input class="reviews__input input" name="name" id="name-field" placeholder="Имя" value="Пётр" type="text"
@@ -69,9 +69,9 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="reviews__fieldset reviews__fieldset--size-m">
+        <fieldset class="reviews__fieldset reviews__fieldset--space-bottom-m">
           <legend class="reviews__legend">Контактная информация:</legend>
-          <ul class="reviews__list">
+          <ul class="reviews__list reviews__list--space-left">
             <li class="reviews__item">
               <label class="reviews__label" for="phone-field">Контактный телефон*:</label>
               <div class="reviews__input-container">
@@ -104,9 +104,9 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="reviews__fieldset reviews__fieldset--size-s">
-          <legend class="reviews__legend">Ваше общее впечатление:</legend>
-          <ul class="reviews__list">
+        <fieldset class="reviews__fieldset reviews__fieldset--space-bottom-m reviews__fieldset--max-width">
+          <legend class="reviews__legend reviews__legend--decor">Ваше общее впечатление:</legend>
+          <ul class="reviews__list reviews__list--row reviews__list--radio">
             <li class="reviews__item">
               <label class="reviews__label-radio">
                 <input class="visually-hidden reviews__input-radio" name="impression" value="posirive" type="radio"
@@ -131,31 +131,31 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="reviews__fieldset reviews__fieldset--size-s">
-          <legend class="reviews__legend">Посещенные достопримечательности:</legend>
-          <ul class="reviews__list">
-            <li class="reviews__item">
+        <fieldset class="reviews__fieldset reviews__fieldset--space-bottom-s reviews__fieldset--max-width">
+          <legend class="reviews__legend reviews__legend--space-top reviews__legend--decor">Посещенные <br class="reviews__br"> достопримечательности:</legend>
+          <ul class="reviews__list reviews__list--row reviews__list--checkbox">
+            <li class="reviews__item reviews__item--checkbox">
               <label class="reviews__label-checkbox">
                 <input class="visually-hidden reviews__input-checkbox" name="devil's bridge" type="checkbox" checked>
                 <span class="reviews__control-mark"></span>
                 <span class="reviews__control-label">Мост Дьявола</span>
               </label>
             </li>
-            <li class="reviews__item">
+            <li class="reviews__item reviews__item--checkbox">
               <label class="reviews__label-checkbox">
                 <input class="visually-hidden reviews__input-checkbox" name="mount bell" type="checkbox" checked>
                 <span class="reviews__control-mark"></span>
                 <span class="reviews__control-label">Гора-Колокол</span>
               </label>
             </li>
-            <li class="reviews__item">
+            <li class="reviews__item reviews__item--checkbox">
               <label class="reviews__label-checkbox">
                 <input class="visually-hidden reviews__input-checkbox" name="slide park" type="checkbox" checked>
                 <span class="reviews__control-mark"></span>
                 <span class="reviews__control-label">Слайд-парк</span>
               </label>
             </li>
-            <li class="reviews__item">
+            <li class="reviews__item reviews__item--checkbox">
               <label class="reviews__label-checkbox">
                 <input class="visually-hidden reviews__input-checkbox" name="red rocks" type="checkbox">
                 <span class="reviews__control-mark"></span>
@@ -164,10 +164,10 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="reviews__fieldset reviews__fieldset--size-l">
-          <legend class="reviews__legend">Опишите свои эмоции:</legend>
+        <fieldset class="reviews__fieldset reviews__fieldset--space-bottom-l">
+          <legend class="reviews__legend reviews__legend--decor">Опишите свои эмоции:</legend>
           <label class="visually-hidden" for="textarea-field">Заполните поле</label>
-          <textarea class="reviews__textarea" name="textarea" id="textarea-field" rows="5"
+          <textarea class="reviews__textarea" name="textarea" id="textarea-field" rows="4"
             placeholder="Опишите подробно все свои восторги"></textarea>
         </fieldset>
         <button class="reviews__button button" type="submit">Отправить отзыв</button>
@@ -227,24 +227,25 @@
   <!-- К modal-container добавить modal-container--error для открытия модального окна -->
   <div class="modal-container">
     <div class="modal-container__wrapper">
-      <h2 class="modal-container__title">Что-то пошло не так</h2>
+      <h2 class="modal-container__title">Что-то пошло не так!</h2>
       <p class="modal-container__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-      <button class="modal-container__button button button--m">Ок</button>
+      <button class="modal-container__button button">Ок</button>
     </div>
   </div>
   <!-- К modal-container добавить modal-container--open для открытия модального окна -->
   <div class="modal-container">
     <div class="modal-container__wrapper modal-container__wrapper--size-s">
-      <h2 class="modal-container__title modal-container__title--padding">Ваш отзыв отправлен</h2>
-      <p class="modal-container__text modal-container__text--padding">Спасибо за ваше участие, ваш отзыв уже поступил к
-        нам. В ближайшее время мы
+      <h2 class="modal-container__title modal-container__title--size-s">Ваш отзыв отправлен!</h2>
+      <p class="modal-container__text modal-container__text--space">Спасибо за ваше участие, ваш отзыв уже поступил к
+        нам.<br> В ближайшее время мы
         опубликуем его на сайте</p>
       <div class="modal-container__wrapper-button">
-        <button class="modal-container__button modal-container__button--size-m button button--size-m">Закрыть
+        <button class="modal-container__button modal-container__button--size-m button">Закрыть
           окно</button>
       </div>
     </div>
   </div>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
