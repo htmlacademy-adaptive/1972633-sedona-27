@@ -1,19 +1,11 @@
 .main-header {
   min-height: 56px;
   background-color: $white;
-
-  @media (min-width: $tablet-width) {
-    padding: 0 5px 0 20px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding: 0 3px 0 23px;
-  }
 }
 
 .main-header__logo {
   position: absolute;
-  width: 100%;
+  width: 185px;
   display: block;
   text-align: center;
   left: 50%;
@@ -22,5 +14,17 @@
   @media (min-width: $tablet-width) {
     z-index: 2;
     width: auto;
+  }
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    outline: 2px solid $darkblue;
   }
 }

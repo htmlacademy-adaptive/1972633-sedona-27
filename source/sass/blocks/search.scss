@@ -22,6 +22,11 @@
   }
 }
 
+.search__button[aria-disabled="true"] {
+  background-color: $darkgrey;
+  pointer-events: none;
+}
+
 .search__title {
   font-size: 21px;
   line-height: 26px;

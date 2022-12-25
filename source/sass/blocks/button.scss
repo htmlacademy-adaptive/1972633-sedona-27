@@ -10,6 +10,7 @@
   display: block;
   text-align: center;
   border: none;
+  cursor: pointer;
 
   &:hover {
     background-color: $darkblue;
@@ -17,5 +18,9 @@
 
   &:active {
     background-color: $accentblue;
+  }
+
+  &:focus {
+    outline: 2px solid $darkblue;
   }
 }

@@ -10,6 +10,10 @@
   &:active {
     color: $lightblack;
   }
+
+  &:focus {
+    outline: 2px solid $darkblue;
+  }
 }
 
 .copyright__text {
