@@ -63,6 +63,10 @@
   &:active .doubt__button {
     opacity: 0.5;
   }
+
+  &:focus .doubt__button {
+    outline: 2px solid $darkblue;
+  }
 }
 
 .doubt__video-image {
@@ -86,4 +90,5 @@
   margin: auto;
   padding: 0;
   border: 0;
+  cursor: pointer;
 }

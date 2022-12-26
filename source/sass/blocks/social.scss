@@ -5,6 +5,7 @@
   display: grid;
   grid-template-columns: repeat(3, 48px);
   column-gap: 6px;
+  row-gap: 6px;
 }
 
 .social__link {
@@ -20,6 +21,10 @@
 
   &:active {
     background-color: $accentblue;
+  }
+
+  &:focus {
+    outline: 2px solid $darkblue;
   }
 }
 

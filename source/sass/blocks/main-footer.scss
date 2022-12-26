@@ -6,18 +6,13 @@
   background-color: $white;
 
   @media (min-width: $tablet-width) {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 31px 76px 36px 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 31px 78px 36px 60px;
     align-items: center;
   }
 
   @media (min-width: $desktop-width) {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-between;
     padding: 34px 137px 36px 120px;
     align-items: center;
@@ -27,11 +22,11 @@
     padding: 27px 18px 23px;
 
     @media (min-width: $tablet-width) {
-      padding: 27px 60px 36px;
+      padding: 28px 62px 36px 61px;
     }
 
     @media (min-width: $desktop-width) {
-      padding: 57px 120px 33px;
+      padding: 59px 120px 33px;
     }
   }
 }
@@ -48,17 +43,32 @@
 
   @media (min-width: $tablet-width) {
     margin: 0;
+    display: grid;
+    justify-self: start;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:focus {
+    outline: 2px solid $darkblue;
   }
 }
 
 .main-footer__social {
   @media (min-width: $tablet-width) {
-    transform: translateX(5px);
+    justify-self: center;
+    transform: translateX(10px);
   }
 
-  &--size-s {
+  &--translate-none {
     @media (min-width: $tablet-width) {
-      transform: translateX(-5px);
+      transform: none;
     }
   }
 }
@@ -68,5 +78,7 @@
 
   @media (min-width: $tablet-width) {
     margin: 0;
+    display: grid;
+    justify-self: end;
   }
 }
