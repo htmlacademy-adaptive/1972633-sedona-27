@@ -22,19 +22,6 @@
   }
 }
 
-// .advantages__list::before {
-//   position: absolute;
-//   content: "";
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-//   background-size: 100% 100%;
-//   background-image: url("../../img/main/decor.svg");
-//   background-position: 0 -16px;
-//   background-repeat: no-repeat;
-// }
-
 .advantages__item--decor {
   position: relative;
 }
@@ -197,6 +184,14 @@
     color: $white;
   }
 
+  &--width {
+    width: 80%;
+
+    @media (min-width: $tablet-width) {
+      width: 84%;
+    }
+  }
+
   &--width-s {
     @media (min-width: $desktop-width) {
       max-width: 233px;
@@ -204,45 +199,16 @@
   }
 }
 
-.advantages__subbr {
+br {
   display: none;
 
   @media (min-width: $tablet-width) {
     display: block;
-  }
-}
-
-.advantages__br {
-  display: none;
-
-  @media (min-width: $tablet-width) {
-    display: block;
-  }
-
-  @media (min-width: $desktop-width) {
-    display: none;
-  }
-
-  &--mobile {
-    display: block;
-
-    @media (min-width: $tablet-width) {
-      display: none;
-    }
-  }
-
-  &--tablet {
-    display: none;
-
-    @media (min-width: $tablet-width) {
-      display: block;
-    }
   }
 }
 
 picture {
   @media (min-width: $tablet-width) {
-    grid-column: 2/-1;
     display: flex;
   }
 }
@@ -257,10 +223,6 @@ picture {
 .advantages__img {
   width: 100%;
   display: block;
-
-  @media (min-width: $tablet-width) {
-    grid-column: 2/-1;
-  }
 }
 
 .advantages__container-img--reverse {
@@ -276,8 +238,8 @@ picture {
   padding: 0;
 
   @media (min-width: $tablet-width) {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     padding: 0;
   }
 }
@@ -289,6 +251,7 @@ picture {
   padding: 0 18px 25px;
 
   @media (min-width: $tablet-width) {
+    align-items: center;
     min-height: 331px;
     padding: 60px 33px 63px;
     flex-basis: 33.33%;
@@ -297,7 +260,7 @@ picture {
 
   @media (min-width: $desktop-width) {
     width: 400px;
-    padding: 60px 33px 70px;
+    padding: 60px 33px 72px;
   }
 
   &--house {
@@ -306,64 +269,79 @@ picture {
     background-position: 18px 24px;
 
     @media (min-width: $tablet-width) {
-      background-image: url("../img/main/house-tablet.svg");
-      background-repeat: no-repeat;
-      background-position: center 60px;
+      background-size: 81px 77px;
+      background-position: center 57px;
     }
 
     @media (min-width: $desktop-width) {
-      background-image: url("../img/main/house-desktop.svg");
-      background-repeat: no-repeat;
       background-position: center 70px;
     }
   }
 
   &--food {
-    background-image: url("../../img/main/food.svg");
+    background-image: url("../img/main/food.svg");
     background-repeat: no-repeat;
     background-position: 18px 0;
 
     @media (min-width: $tablet-width) {
-      background-image: url("../img/main/food-tablet.svg");
-      background-repeat: no-repeat;
-      background-position: center 60px;
+      background-size: 81px 77px;
+      background-position: center 57px;
     }
 
     @media (min-width: $desktop-width) {
-      background-image: url("../img/main/food-desktop.svg");
-      background-repeat: no-repeat;
-      background-position: center 74px;
+      background-size: 73px 77px;
+      background-position: center 70px;
     }
   }
 
   &--souvenirs {
-    background-image: url("../../img/main/souvenirs.svg");
+    background-image: url("../img/main/souvenirs.svg");
     background-repeat: no-repeat;
     background-position: 21px 0;
 
     @media (min-width: $tablet-width) {
-      background-image: url("../img/main/souvenirs-tablet.svg");
-      background-repeat: no-repeat;
-      background-position: center 64px;
+      background-size: 67px 75px;
+      background-position: 51% 62px;
     }
 
     @media (min-width: $desktop-width) {
-      background-image: url("../img/main/souvenirs-desktop.svg");
-      background-repeat: no-repeat;
-      background-position: center 70px;
+      background-size: 77px 75px;
+      background-position: 50% 69px;
+    }
+  }
+
+  &--space-s {
+    @media (max-width: $mobile-width-only) {
+      padding: 25px 18px 25px;
+    }
+
+    @media (min-width: $tablet-width) {
+      padding: 60px 33px 61px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 60px 33px 71px;
+    }
+  }
+
+  &--space-m {
+    @media (max-width: $mobile-width-only) {
+      padding: 0 18px 45px;
+    }
+
+    @media (min-width: $tablet-width) {
+      padding: 60px 33px 66px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 60px 33px 69px;
     }
   }
 }
 
-.advantages__subitem:first-child {
-  @media (max-width: $mobile-width-only) {
-    padding: 25px 18px 25px;
-  }
-}
-
-.advantages__subitem:last-child {
-  @media (max-width: $mobile-width-only) {
-    padding: 0 18px 45px;
+.advantages__subitem:last-child .advantages__subtext {
+  @media (min-width: $desktop-width) {
+    max-width: 232px;
   }
 }
 
@@ -399,6 +377,7 @@ picture {
   @media (min-width: $tablet-width) {
     text-align: center;
     padding-left: 0;
+    width: 88%;
   }
 
   @media (min-width: $desktop-width) {

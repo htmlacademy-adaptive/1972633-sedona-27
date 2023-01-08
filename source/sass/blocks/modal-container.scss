@@ -20,6 +20,7 @@
 .modal-container__wrapper {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 100%;
   padding: 44px 42px 37px 41px;
   background-color: $white;
@@ -27,7 +28,7 @@
 
   @media (min-width: $tablet-width) {
     max-width: 400px;
-    padding: 44px 42px 48px 41px;
+    padding: 44px 42px 52px 41px;
   }
 
   &--size-s {
@@ -52,7 +53,7 @@
   @media (min-width: $tablet-width) {
     font-size: 30px;
     line-height: 40px;
-    margin: 0 auto 28px;
+    margin: 0 auto 24px;
     max-width: 249px;
   }
 
@@ -96,7 +97,7 @@
 }
 
 .modal-container__button {
-  min-width: 180px;
+  width: 76%;
   font-size: 18px;
 
   @media (min-width: $tablet-width) {

@@ -6,10 +6,13 @@
   <title>HTML Academy: Седона</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
-  <link rel="icon" href="images/favicons/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="images/favicons/apple.png"> <!-- 180×180 -->
+  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple.png"> <!-- 180×180 -->
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/ptsans.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/ptsansbold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="js/script.js" as="script">
 </head>
 
 <body class="page__body">
@@ -45,12 +48,10 @@
     </h1>
     <section class="hero">
       <div class="hero__wrapper">
-        <picture>
-          <source media="(min-width:768px)" width="461" height="350" srcset="img/main/welcome-tablet.svg">
-          <img class="hero__image" src="img/main/welcome.svg" width="282" height="214" alt="Добро пожаловать в Седону.">
-        </picture>
+        <img class="hero__image" src="img/main/welcome.svg" width="282" height="214" alt="Добро пожаловать в Седону.">
       </div>
-      <h2 class="hero__title">Седона — небольшой<br class="hero__br-index"> городок в Аризоне, заслуживающий большего!
+      <h2 class="hero__title">Седона — небольшой
+        городок в Аризоне, заслуживающий большего!
       </h2>
       <p class="hero__text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
     </section>
@@ -67,33 +68,34 @@
             </div>
             <div class="advantages__container-img">
               <picture>
-                <source type="image/webp" media="(min-width:1280px)" srcset="img/main/photo-city-desktop.webp, img/main/photo-city-desktop@2x.webp 2x">
-                <source type="image/webp" media="(min-width:768px)" srcset="img/main/photo-city-tablet.webp, img/main/photo-city-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/main/photo-city.webp, img/main/photo-city@2x.webp 2x">
+                <source type="image/webp" media="(min-width:1280px)"
+                  srcset="img/main/photo-city-desktop.webp 1x, img/main/photo-city-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width:768px)"
+                  srcset="img/main/photo-city-tablet.webp 1x, img/main/photo-city-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/main/photo-city.webp 1x, img/main/photo-city@2x.webp 2x">
                 <source media="(min-width:1280px)"
-                  srcset="img/main/photo-city-desktop.jpg, img/main/photo-city-desktop@2x.jpg 2x">
+                  srcset="img/main/photo-city-desktop.jpg 1x, img/main/photo-city-desktop@2x.jpg 2x">
                 <source media="(min-width:768px)"
-                  srcset="img/main/photo-city-tablet.jpg, img/main/photo-city-tablet@2x.jpg 2x">
+                  srcset="img/main/photo-city-tablet.jpg 1x, img/main/photo-city-tablet@2x.jpg 2x">
                 <img class="advantages__img" src="img/main/photo-city.jpg" srcset="img/main/photo-city@2x.jpg 2x"
                   width="320" height="260" alt="Настоящий городок.">
               </picture>
             </div>
-
           </div>
           <ul class="advantages__sublist">
-            <li class="advantages__subitem advantages__subitem--house">
+            <li class="advantages__subitem advantages__subitem--space-s advantages__subitem--house">
               <h3 class="advantages__subtitle">Жилье</h3>
               <p class="advantages__subtext">Рекомендуем пожить в настоящем мотеле, все как в кино!
               </p>
             </li>
             <li class="advantages__subitem advantages__subitem--food">
               <h3 class="advantages__subtitle">Еда</h3>
-              <p class="advantages__subtext">Всегда заказывайте фирменный бургер,<br class="advantages__subbr"> вы не
+              <p class="advantages__subtext">Всегда заказывайте фирменный бургер, вы&nbsp;не
                 разочаруетесь!</p>
             </li>
-            <li class="advantages__subitem advantages__subitem--souvenirs">
+            <li class="advantages__subitem advantages__subitem--space-m advantages__subitem--souvenirs">
               <h3 class="advantages__subtitle">Сувениры</h3>
-              <p class="advantages__subtext">Не только китайского,<br class="advantages__subbr"> но и местного
+              <p class="advantages__subtext">Не только китайского, <br>но&nbsp;и местного
                 производства!</p>
             </li>
           </ul>
@@ -110,9 +112,9 @@
             <div class="advantages__container-img advantages__container-img--reverse">
               <picture>
                 <source media="(min-width:1280px)"
-                  srcset="img/main/photo-mountains-desktop.jpg, img/main/photo-mountains-desktop@2x.jpg 2x">
+                  srcset="img/main/photo-mountains-desktop.jpg 1x, img/main/photo-mountains-desktop@2x.jpg 2x">
                 <source media="(min-width:768px)"
-                  srcset="img/main/photo-mountains-tablet.jpg, img/main/photo-mountains-tablet@2x.jpg 2x">
+                  srcset="img/main/photo-mountains-tablet.jpg 1x, img/main/photo-mountains-tablet@2x.jpg 2x">
                 <img class="advantages__img advantages__img" src="img/main/photo-mountains.jpg"
                   srcset="img/main/photo-mountains@2x.jpg 2x" width="320" height="260" alt="Мост дьявола.">
               </picture>
@@ -130,8 +132,7 @@
           <div class="advantages__container advantages__container--size-s advantages__container--space-bottom">
             <h3 class="advantages__title">Красивая дорога</h3>
             <span class="advantages__number">— №4 —</span>
-            <p class="advantages__text">Ехать в Седону из Лас-<br class="advantages__br">Вегаса<br
-                class="advantages__br--mobile"> совсем<br class="advantages__br--tablet"> не скучно!</p>
+            <p class="advantages__text advantages__text--width">Ехать в Седону из Лас-Вегаса совсем не&nbsp;скучно!</p>
           </div>
         </li>
         <li class="advantages__item advantages__item--grey advantages__item--decor-line">
@@ -145,7 +146,8 @@
     </section>
     <section class="search">
       <h2 class="search__title">Заинтересовались?</h2>
-      <p class="search__text">Укажите предполагаемые даты поездки, <br class="br"> и мы покажем вам лучшие предложения
+      <p class="search__text">Укажите предполагаемые даты поездки, и&nbsp;мы&nbsp;покажем&nbsp;вам&nbsp;лучшие
+        предложения
         гостиниц в
         Седоне
       </p>
@@ -168,8 +170,8 @@
       <li class="social__item">
         <a class="social__link" href="#">
           <svg class="social__link-icon" aria-hidden="true" focusable="false" width="24" height="14" viewBox="0 0 24 14"
-            fill="none" xmlns="http://www.w3.org/2000/svg">
-            <use href="../img/sprite.svg#social-vk" />
+            xmlns="http://www.w3.org/2000/svg">
+            <use href="img/sprite.svg#vkontakte" />
           </svg>
           <span class="visually-hidden">vkontakte</span>
         </a>
@@ -178,7 +180,7 @@
         <a class="social__link" href="#">
           <svg class="social__link-icon" aria-hidden="true" focusable="false" width="22" height="18" viewBox="0 0 22 18"
             fill="none" xmlns="http://www.w3.org/2000/svg">
-            <use href="../img/sprite.svg#social-telegram" />
+            <use href="img/sprite.svg#telegram" />
           </svg>
           <span class="visually-hidden">telegram</span>
         </a>
@@ -187,7 +189,7 @@
         <a class="social__link" href="#">
           <svg class="social__link-icon" aria-hidden="true" focusable="false" width="20" height="14" viewBox="0 0 20 14"
             fill="none" xmlns="http://www.w3.org/2000/svg">
-            <use href="../img/sprite.svg#social-youtube" />
+            <use href="img/sprite.svg#youtube" />
           </svg>
           <span class="visually-hidden">youtube</span>
         </a>
@@ -198,7 +200,7 @@
         <span class="copyright__text">Разработано</span>
         <svg class="copyright__icon" width="27" height="35" viewBox="0 0 27 35" fill="none"
           xmlns="http://www.w3.org/2000/svg">
-          <use href="../img/sprite.svg#copyright" />
+          <use href="../img/sprite.svg#htmlacademy" />
         </svg>
         <span class="visually-hidden">Лого htmlacademy</span>
       </a>

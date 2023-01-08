@@ -15,6 +15,7 @@
   &:focus {
     box-shadow: 0 0 0 2px $darkblue;
     outline: none;
+    z-index: 1;
   }
 
   &:active {
