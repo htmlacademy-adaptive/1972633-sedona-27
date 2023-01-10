@@ -5,12 +5,16 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 73px 60px 30px;
+    padding: 73px 0 30px;
+    overflow: hidden;
+    width: 84.5%;
+    margin: 0 auto;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 39px 120px 0;
+    padding: 39px 0 0;
     grid-template-columns: 493px 1fr;
+    width: 80%;
   }
 }
 
@@ -126,7 +130,7 @@
     height: 1px;
     background-color: $linegrey;
     z-index: 2;
-    width: 16vw;
+    width: 100%;
   }
 
   @media (min-width: $desktop-width) {
@@ -143,7 +147,7 @@
     height: 1px;
     background-color: $linegrey;
     z-index: 2;
-    width: 16vw;
+    width: 100%;
   }
 
   @media (min-width: $desktop-width) {
@@ -176,7 +180,7 @@
 
   &--radio {
     @media (min-width: $tablet-width) {
-      padding: 0 69px 0 35px;
+      padding: 0 69px 0 37px;
       column-gap: 50px;
     }
 
