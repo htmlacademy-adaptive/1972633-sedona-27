@@ -40,6 +40,10 @@
 
 .main-nav--closed .main-nav__toggle:focus {
   outline: 2px solid $darkblue;
+
+  @media (min-width: $tablet-width) {
+    outline: none;
+  }
 }
 
 @media (max-width: $mobile-width-only) {

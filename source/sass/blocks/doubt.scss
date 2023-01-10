@@ -29,6 +29,10 @@
     max-width: 445px;
     margin: 0 0 30px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 32px;
+  }
 }
 
 .doubt__text {
@@ -44,6 +48,10 @@
     margin: 0 0 90px;
     padding: 0;
   }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 88px;
+  }
 }
 
 .doubt__video-container {
@@ -54,18 +62,6 @@
   @media (min-width: $desktop-width) {
     min-width: 800px;
     height: 500px;
-  }
-
-  &:hover .doubt__button {
-    opacity: 0.8;
-  }
-
-  &:active .doubt__button {
-    opacity: 0.5;
-  }
-
-  &:focus .doubt__button {
-    outline: 2px solid $darkblue;
   }
 }
 
@@ -91,4 +87,16 @@
   padding: 0;
   border: 0;
   cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  &:focus {
+    outline: 2px solid $darkblue;
+  }
 }

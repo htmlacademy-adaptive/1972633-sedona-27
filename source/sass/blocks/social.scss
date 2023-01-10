@@ -11,6 +11,7 @@
 .social__link {
   position: relative;
   background-color: $blue;
+  color: $white;
   display: block;
   min-height: 48px;
   min-width: 48px;
@@ -21,9 +22,10 @@
 
   &:active {
     background-color: $accentblue;
+    color: rgba($white, 0.3);
   }
 
-  &:focus {
+  &:focus-visible {
     outline: 2px solid $darkblue;
   }
 }
