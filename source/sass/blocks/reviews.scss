@@ -132,10 +132,6 @@
     z-index: 2;
     width: 100%;
   }
-
-  @media (min-width: $desktop-width) {
-    width: 22vw;
-  }
 }
 
 .reviews__legend--decor::after {
@@ -148,10 +144,6 @@
     background-color: $linegrey;
     z-index: 2;
     width: 100%;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 22vw;
   }
 }
 
@@ -295,6 +287,11 @@
   border-radius: 50%;
 }
 
+.reviews__input-radio:disabled + .reviews__control-mark {
+  background-color: rgba($lightgrey, 0.8);
+  pointer-events: none;
+}
+
 .reviews__control-mark {
   position: absolute;
   width: 46px;
@@ -321,6 +318,15 @@
 
 .reviews__input-radio:checked:active + .reviews__control-mark::after {
   opacity: 0.3;
+}
+
+.reviews__input-radio:checked:disabled + .reviews__control-mark::after {
+  opacity: 0.3;
+}
+
+.reviews__input-radio:disabled ~ .reviews__control-label {
+  opacity: 0.3;
+  pointer-events: none;
 }
 
 .reviews__control-label {
@@ -359,6 +365,20 @@
   outline: 2px solid $darkblue;
 }
 
+.reviews__input-checkbox:disabled + .reviews__control-mark {
+  background-color: rgba($lightgrey, 0.8);
+  pointer-events: none;
+}
+
+.reviews__input-checkbox:disabled ~ .reviews__control-label {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.reviews__input-checkbox:checked:disabled + .reviews__control-mark::after {
+  opacity: 0.3;
+}
+
 .reviews__textarea {
   font-family: $main-font;
   font-size: 18px;
@@ -380,6 +400,16 @@
     color: $black;
   }
 
+  &:disabled {
+    background-color: rgba($lightgrey, 0.8);
+    pointer-events: none;
+    color: rgba($black, 0.1);
+  }
+
+  &:disabled::placeholder {
+    color: rgba($black, 0.1);
+  }
+
   @media (min-width: $tablet-width) {
     margin: 0;
     padding: 17px 16px 14px;
@@ -389,8 +419,11 @@
   @media (min-width: $tablet-width) {
     margin: 0 auto;
     padding: 16px 16px 14px;
-    max-width: 768px;
     width: 100%;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 768px;
   }
 }
 
@@ -419,7 +452,7 @@
 
   @media (min-width: $tablet-width) {
     margin: 0 0 41px auto;
-    padding-bottom: 14px;
+    padding: 0 0 14px 20px;
     font-size: 14px;
   }
 

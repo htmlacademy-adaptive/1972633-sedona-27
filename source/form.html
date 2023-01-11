@@ -66,16 +66,19 @@
           <ul class="reviews__list reviews__list--space-right">
             <li class="reviews__item">
               <label class="reviews__label" for="name-field">Имя*:</label>
+              <!--input добавить атрибут disabled, для неактивного состояния -->
               <input class="reviews__input input" name="name" id="name-field" placeholder="Имя" value="Пётр" type="text"
                 required>
             </li>
             <li class="reviews__item">
               <label class="reviews__label" for="surname-field">Фамилия*:</label>
+              <!--input добавить атрибут disabled, для неактивного состояния -->
               <input class="reviews__input input" name="surname" id="surname-field" placeholder="Фамилия" value="Иванов"
                 type="text" required>
             </li>
             <li class="reviews__item">
               <label class="reviews__label" for="middlename-field">Отчество:</label>
+              <!--input добавить атрибут disabled, для неактивного состояния -->
               <input class="reviews__input input" name="middlename" id="middlename-field" placeholder="Отчество"
                 value="Викторович" type="text">
             </li>
@@ -87,6 +90,7 @@
             <li class="reviews__item">
               <label class="reviews__label" for="phone-field">Контактный телефон*:</label>
               <div class="reviews__input-container">
+                <!--input добавить атрибут disabled, для неактивного состояния -->
                 <input class="reviews__input input" name="phone" id="phone-field" placeholder="Введите телефон"
                   type="tel" required>
                 <span class="reviews__icon">
@@ -100,6 +104,7 @@
             <li class="reviews__item">
               <label class="reviews__label" for="email-field">Электронная почта*:</label>
               <div class="reviews__input-container">
+                <!--input добавить атрибут disabled, для неактивного состояния -->
                 <input class="reviews__input input" name="email" id="email-field" placeholder="Введите e-mail"
                   type="email" required>
                 <span class="reviews__icon">
@@ -117,6 +122,7 @@
           <ul class="reviews__list reviews__list--row reviews__list--radio">
             <li class="reviews__item">
               <label class="reviews__label-radio">
+                <!--input добавить атрибут disabled, для неактивного состояния -->
                 <input class="visually-hidden reviews__input-radio" name="impression" value="positive" type="radio"
                   checked>
                 <span class="reviews__control-mark"></span>
@@ -125,6 +131,7 @@
             </li>
             <li class="reviews__item">
               <label class="reviews__label-radio">
+                <!--input добавить атрибут disabled, для неактивного состояния -->
                 <input class="visually-hidden reviews__input-radio" name="impression" value="negative" type="radio">
                 <span class="reviews__control-mark"></span>
                 <span class="reviews__control-label">Скорее отрицательное</span>
@@ -132,6 +139,7 @@
             </li>
             <li class="reviews__item">
               <label class="reviews__label-radio">
+                <!--input добавить атрибут disabled, для неактивного состояния -->
                 <input class="visually-hidden reviews__input-radio" name="impression" value="difficult" type="radio">
                 <span class="reviews__control-mark"></span>
                 <span class="reviews__control-label">Затрудняюсь ответить</span>
@@ -145,6 +153,7 @@
           <ul class="reviews__list reviews__list--row reviews__list--checkbox">
             <li class="reviews__item reviews__item--checkbox">
               <label class="reviews__label-checkbox">
+                <!--input добавить атрибут disabled, для неактивного состояния -->
                 <input class="visually-hidden reviews__input-checkbox" name="devil bridge" type="checkbox" checked>
                 <span class="reviews__control-mark"></span>
                 <span class="reviews__control-label">Мост Дьявола</span>
@@ -152,6 +161,7 @@
             </li>
             <li class="reviews__item reviews__item--checkbox">
               <label class="reviews__label-checkbox">
+                <!--input добавить атрибут disabled, для неактивного состояния -->
                 <input class="visually-hidden reviews__input-checkbox" name="mount bell" type="checkbox" checked>
                 <span class="reviews__control-mark"></span>
                 <span class="reviews__control-label">Гора-Колокол</span>
@@ -159,6 +169,7 @@
             </li>
             <li class="reviews__item reviews__item--checkbox">
               <label class="reviews__label-checkbox">
+                <!--input добавить атрибут disabled, для неактивного состояния -->
                 <input class="visually-hidden reviews__input-checkbox" name="slide park" type="checkbox" checked>
                 <span class="reviews__control-mark"></span>
                 <span class="reviews__control-label">Слайд-парк</span>
@@ -166,6 +177,7 @@
             </li>
             <li class="reviews__item reviews__item--checkbox">
               <label class="reviews__label-checkbox">
+                <!--input добавить атрибут disabled, для неактивного состояния -->
                 <input class="visually-hidden reviews__input-checkbox" name="red rocks" type="checkbox">
                 <span class="reviews__control-mark"></span>
                 <span class="reviews__control-label">Красные скалы</span>
@@ -176,9 +188,11 @@
         <fieldset class="reviews__fieldset reviews__fieldset--space-bottom-l">
           <legend class="reviews__legend reviews__legend--decor">Опишите свои эмоции:</legend>
           <label class="visually-hidden" for="textarea-field">Заполните поле</label>
+          <!--textarea добавить атрибут disabled, для неактивного состояния -->
           <textarea class="reviews__textarea" name="textarea" id="textarea-field" rows="4"
             placeholder="Опишите подробно все свои восторги"></textarea>
         </fieldset>
+        <!--button добавить атрибут disabled, для неактивного состояния -->
         <button class="reviews__button button" type="submit">Отправить отзыв</button>
         <span class="reviews__smalllegend">* — обязательные поля</span>
       </form>
@@ -231,7 +245,8 @@
     <div class="modal-container__wrapper">
       <h2 class="modal-container__title">Что-то пошло не так!</h2>
       <p class="modal-container__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-      <button class="modal-container__button button">Ок</button>
+      <!--button добавить атрибут disabled, для неактивного состояния -->
+      <button class="modal-container__button button" type="button">Ок</button>
     </div>
   </div>
   <!-- К modal-container добавить modal-container--open для открытия модального окна -->
@@ -242,7 +257,8 @@
         нам. В&nbsp;ближайшее время мы
         опубликуем его на сайте</p>
       <div class="modal-container__wrapper-button">
-        <button class="modal-container__button modal-container__button--size-m button">Закрыть
+        <!--button добавить атрибут disabled, для неактивного состояния -->
+        <button class="modal-container__button modal-container__button--size-m button" type="button">Закрыть
           окно</button>
       </div>
     </div>
