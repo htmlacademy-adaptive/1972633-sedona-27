@@ -24,4 +24,9 @@
   &:focus-visible {
     outline: 2px solid $darkblue;
   }
+
+  &:disabled {
+    background-color: $darkgrey;
+    pointer-events: none;
+  }
 }
